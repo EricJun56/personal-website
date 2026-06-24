@@ -4,11 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- EDIT: page title shown in the browser tab -->
-  <title>Eric's Web Corner</title>
-  <meta name="description" content="Personal site of Your Name." />
+  <title>Seungwon (Eric) Jun</title>
+  <meta name="description" content="Personal site of Seungwon (Eric) Jun." />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
@@ -17,30 +15,8 @@
 </head>
 <body>
 
-  <!-- =================================================================
-       NAVIGATION
-       To add a tab later: copy one <li> below and point it at a new
-       page (e.g. projects.html). Do the same in every page's nav.
-       The active highlight is handled automatically by js/main.js.
-       ================================================================= -->
-  <header class="nav">
-    <div class="nav__inner">
-      <a class="nav__brand" href="index.html">
-        <span class="nav__mark" aria-hidden="true"></span>
-        Seungwon (Eric) Jun
-      </a>
-
-      <button class="nav__toggle" aria-label="Menu" aria-expanded="false">
-        <span></span>
-      </button>
-
-      <ul class="nav__links">
-        <li><a class="nav__link" href="index.html">Home</a></li>
-        <li><a class="nav__link" href="resume.html">Résumé</a></li>
-        <!-- <li><a class="nav__link" href="projects.html">Projects</a></li> -->
-      </ul>
-    </div>
-  </header>
+  <!-- Nav is injected here by js/components.js — do not edit this line -->
+  <div id="nav-placeholder"></div>
 
   <main>
 
@@ -50,13 +26,14 @@
         <span class="eyebrow">Available for new work</span>
 
         <!-- EDIT: your name + one-line identity -->
-        <h1>Hi, I'm <span class="accent">Eric</span>.</h1>
+        <h1>Hi, I'm <span class="accent">Eric Jun</span>.</h1>
 
         <!-- EDIT: a short description about you (1–3 sentences). -->
         <p class="hero__lead">
-          I'm a <strong>data analyst with a strong GIS and ETL/data pipeline skills</strong> based in Richmond Hill. I currently work
-          as a waste management data analyst at Halton Region. This is my
-          corner of the web — a place to find my work and get in touch.
+          I'm a <strong>Data Analyst & GIS Specialist</strong> based in Burlington, Ontario.
+          I work on turning spatial and tabular data into clear, actionable insights —
+          and I care about building tools that actually get used. This is my corner of the
+          web — a place to find my work and get in touch.
         </p>
 
         <div class="cta-row">
@@ -64,29 +41,27 @@
             View résumé
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-          <!-- EDIT: replace with your email -->
-          <a class="btn btn--ghost" href="mailto:you@example.com">Get in touch</a>
+          <a class="btn btn--ghost" href="mailto:seungwon0324@gmail.com">Get in touch</a>
         </div>
       </div>
     </section>
 
     <!-- ===================== ABOUT / HIGHLIGHTS ===================== -->
-    <!-- A flexible three-card row. Edit, remove, or duplicate cards. -->
     <section class="section">
       <div class="wrap">
         <p class="section__label reveal">A bit more</p>
         <div class="about-grid">
           <article class="card reveal">
             <h3>What I do</h3>
-            <p>I create web maps and dashboards, design and maintain databases, and create data pipelines for ETL work.</p>
+            <p>I specialise in GIS, spatial analysis, and data analytics — bridging geography and data to help organisations make better decisions.</p>
           </article>
           <article class="card reveal">
             <h3>Currently</h3>
-            <p>I'm learning more about cloud data engineering. More specifically, I am working towards the DP-700 certification.</p>
+            <p>Working as a Data Analyst at Halton Region, where I build dashboards, automate workflows, and analyse geospatial datasets.</p>
           </article>
           <article class="card reveal">
             <h3>Elsewhere</h3>
-            <p>You can find me on Linkedin or contact me at seungwon0324@gmail.com.</p>
+            <p>Find me on <a href="https://github.com/EricJun56" target="_blank" rel="noopener" style="color:var(--blue-bright)">GitHub</a> or <a href="https://ca.linkedin.com/in/seungwon-jun-90b44b221" target="_blank" rel="noopener" style="color:var(--blue-bright)">LinkedIn</a>.</p>
           </article>
         </div>
       </div>
@@ -94,20 +69,11 @@
 
   </main>
 
-  <!-- ============================ FOOTER ============================ -->
-  <footer class="footer">
-    <div class="wrap footer__inner">
-      <span>© <span id="year"></span> Eric Jun</span>
-      <nav class="footer__links">
-        <!-- EDIT: your real links -->
-        <a href="https://github.com/EricJun56" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://ca.linkedin.com/in/seungwon-jun-90b44b221" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="seungwon0324@gmail.com">Email</a>
-      </nav>
-    </div>
-  </footer>
+  <!-- Footer is injected here by js/components.js — do not edit this line -->
+  <div id="footer-placeholder"></div>
 
+  <!-- components.js must load before main.js -->
+  <script src="js/components.js"></script>
   <script src="js/main.js"></script>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
